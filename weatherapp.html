@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <link href="src/style.css" rel="stylesheet" type="text/css">
+<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+</head>
+
+<body> 
+
+   <img src="images/sunrise.jpg" class="img-fluid"> 
+ <div class="search">
+        <input type="search" class="form-control rounded" placeholder="Input city.." aria-label="Search"
+        aria-describedby="search-addon" id = "searchInput"/>
+        <button type = "submit" id = "searchCity">Search</button>
+        </span>
+ </div>
+
+ <form action=""></form>
+
+    <h1 id = "city"> Stockholm </h1>
+   <div> <h2 id= "date">
+ 
+  </h2> 
+  
+  <h3>
+   <span class="temperature" id="temperature">19</span
+                ><span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+  </h3></div>
+
+    <div class="list">  <ul class="days">
+    <li class="list-group-item"><tab class="tab">☀️<tab class="secondTab">Tomorrow</li>
+    <li class="list-group-item"><tab class="tab">⛅<tab class="secondTab">Monday</li>
+    <li class="list-group-item"><tab class="tab">⛈️<tab class="secondTab">Tuesday</li>
+    <li class="list-group-item"><tab class="tab">⛅<tab class="secondTab">Wednesday</li>
+    <li class="list-group-item"><tab class="tab">☀️<tab class="secondTab">Thursday</li>
+  </ul>
+
+</div>
+  <script>
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+let hours = currentTime.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = currentTime.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+let day = currentTime.getDay();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
+console.log(`${currentTime} ${hours}:${minutes}`);
+dateElement.innerHTML = `${days[day]} ${hours}:${minutes}`;
+
+// step 2
+
+var searchBar = document.getElementById("searchInput");
+searchBar.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("searchCity").click();
+  }
+});
+
+function search(searchCity) {
+  searchCity.preventDefault();
+  let searchInput = document.querySelector("#searchInput");
+  searchInput.addEventListener("submit", search);
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${searchInput.value}`;
+}
+
+let searchButton = document.querySelector("#searchCity");
+searchButton.addEventListener("click", search);
+
+// step 3
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 72;
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 22;
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+
+</script>
+</body>
+</html>

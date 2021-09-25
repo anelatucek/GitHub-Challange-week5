@@ -1,0 +1,112 @@
+
+img{
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 600px;
+    border-radius: none;
+    margin-bottom: 50px;
+}
+
+.search {
+    position:static;
+    margin: auto;
+    display: block;
+    margin-top: -240px;
+    margin-bottom: 180px;
+    width: 8cm;
+    box-shadow: none;
+    opacity: 0.6;   
+}
+
+h1{
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 440px;
+    border-radius: 25px;
+    border: 5px solid #b1a5a5;
+    margin-bottom: 10px;
+    font-family:'Roboto',sans-serif;
+
+}
+
+h2{
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-family:'Roboto',sans-serif;
+}
+
+h3{
+margin: auto;
+    display: block;
+    text-align: center;
+    font-family:'Roboto',sans-serif;
+}
+
+h4{  margin: auto;
+    display: block;
+    text-align: center;
+ }
+
+.toFa{
+color: black;
+background-color: transparent;
+display:inline-block;
+padding:0.3em 1.2em;
+margin:0 0.3em 0.3em 0;
+border-radius:2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+text-align:center;
+transition: all 0.2s;
+}
+.toFa:hover{cursor: pointer;
+  color: grey;}
+
+.toCe{
+color: black;
+background-color: transparent;
+display:inline-block;
+padding:0.3em 1.2em;
+margin:0 0.3em 0.3em 0;
+border-radius:2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+text-align:center;
+transition: all 0.2s;
+}
+
+.toCe:hover{cursor: pointer;
+  color: grey;}
+
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.secondTab {
+    display: inline-block;
+    margin-left: 130px;
+}
+
+.list{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.days{
+    float: none;
+    display:inline;
+    text-align: left;
+    border-radius: 25px;
+    padding: auto;
+    max-width: 570px;
+}
+ 
